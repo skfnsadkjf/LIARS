@@ -1,0 +1,64 @@
+			-----------------
+			----- Plans -----
+
+			----- Current -----
+
+			----- Required -----
+
+			----- Extra features -----
+
+DOM elelent selector.
+	browser action popup:
+		contain all options for making rule.
+		? icons with instructions
+
+	arrow keys traverse dom selector.
+
+rules:
+	merge option for multiple urls into one content page entry
+
+Options page.
+	update minimum
+	How often to check for update settings.
+		Change this to options/rules
+
+if sort is a binary split, insert gap.
+
+			----- Optional -----
+
+hotkeys for browser action things
+
+Add image identifier. Does it make it too cluttered?
+	would need entries side by side.
+	image source in rule.
+		save images somewhere. Unsure how logistics would work.
+
+Import data from Feedreader and text file.
+
+			----- Relating to using not just kissmanga -----
+
+
+Do rss stuff in background
+Do I care about rss yet? No.
+
+make option for using GET or opening a tab to check listings.
+Maybe in option's rules.
+
+Maybe save whole element instead of just links.
+May be helpful for things like blog updates where saving links wouldn't be meaningful.
+
+			-----------------
+			----- Bugs -----
+
+first sort in default reversed if sorting from first default.
+
+
+Either addon or firefox is borking my tabs sometimes. Hasn't happened it ages now
+
+			-----------------
+			----- Notes -----
+
+
+Can't GET a kissmanga page.
+Possible fix if I into headers.
+Can't into headers because ff forbids me from changing them. <--

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>grim</title>
+
+</head>
+<body>
+<div class="dongs"></div>
+</body>
+<script>
+document.body.style.backgroundColor = "#333333";
+
+// var u = "http://kissmanga.com/Manga/Kuso-Manga-Bukuro"
+// var ex = "*://kissmanga.com/Manga/*/*"
+// var match = "*://kissmanga.com/Manga/*"
+
+// function matches( u , pattern ) {
+// 	var str , arr = pattern.split("*");
+// 	str = arr.reduce( ( sum , v ) => sum + u.substring(sum.length).split( v , 1 )[0] + v );
+// 	return u.startsWith(str) ? true : false;
+// }
+// console.log( matches( u , match ) )
+// console.log( matches( u , ex ) )
+
+function matchTest( url , pattern ) {
+	var str , arr = pattern.split("*");
+	console.log(arr)
+	str = arr.reduce( ( sum , v ) =>{
+		return sum + url.substring(sum.length).split( v , 1 )[0] + v;
+	});
+	console.log(str)
+	console.log( url.startsWith(str) && ( arr[arr.length-1] == "" ? str != "" : url.endsWith(str) ) );
+}
+
+matchTest( "http://kissmanga.com/Manga/Kuso-Manga-Bukuro" , "*://kissmanga.com/Manga/*" )
+
+
+
+
+
+
+</script>
+
+
+
+

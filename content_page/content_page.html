@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>grim</title>
+	<link rel="stylesheet" href="content_page.css"/>
+	<script src="content_page.js"></script>
+	<template id="entry_template"><div><h2><a target="_blank"></a><span></span></h2><div class="popout" style="display:none;"><span class="remove_entry">Delete entry</span><div class="tags"><form>Add tag:<input></input></form></div></div></div></template>
+</head>
+<body>
+	<div>
+		<div>Sort by:</div>
+		<div class="sort">
+			<button id="sortByDefault">Default</button>
+			<button id="sortByName">Name</button>
+			<button id="sortByUnread">Unread>0</button>
+			<button id="sortByStarted">Started</button>
+			<form id="sortByTag">Tag:<input></input></form>
+			<button id="dark">Dark/Light</button>
+		</div>
+		<div id="entries"></div>
+	</div>
+</body>
+
+
+
+<!-- <template id="entry_template">
+<div>
+	<h2>
+		<a>
+		</a>
+		<span>
+		</span>
+	</h2>
+	<div class="popout" style="display:none;">
+		<span class="remove_entry">
+			Delete entry
+		</span>
+		<div class="tags">
+			<form>
+				Add tag:
+				<input>
+				</input>
+			</form>
+			--tags
+		</div>
+		--links
+	</div>
+</div>
+</template> -->
+
+<!-- OLD TEMPLATES -->
+<!-- 	<template id="entry_template"><div class="entry"><div class="entry_inner"><a class="link"></a><span class="unread_count"></span></div><div class="popout display_none"><div class="tags"><form class="add_tags"><input></input></form><span class="remove_entry">Delete entry</span></div><div class="popout_entries"></div></div></div></template>
+	<template id="popout_entry_template"><div class="popout_entry"><a class="popout_link"></a></div></template>
+	<template id="tag_template"><div class="tag"><span class="tag_name"></span><img class="remove_tag" src="/icons/remove.png" alt="Remove tag"></img></div></template> -->
