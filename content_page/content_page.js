@@ -23,7 +23,7 @@ function sortByStarted() {
 }
 function sortByTag( tag ) {
 	sortBy( [...document.querySelectorAll( "#entries > *" )].map( v =>
-		v.querySelector( "#" + tag ) ? 1 : 0
+		v.querySelector( "#" + tag ) ? 0 : 1
 	));
 }
 function sortByTagInput( e ) {
