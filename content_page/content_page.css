@@ -1,7 +1,3 @@
-body {
-    /*filter:invert(100%);*/
-    /*background-color: #333333;*/
-}
 #entries>* {
 	border-radius: 12px;
 	margin: 3px auto;
@@ -46,5 +42,3 @@ form input { height: 12px; width: 60px; }
 #dark {
 	float: right;
 }
-/*.unread { background-color: #E0F2F2; }*/
-/*.read {	background-color: #ffffff; }*/

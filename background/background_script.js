@@ -10,8 +10,8 @@ function doUpdates() { // add dummy entry that waits 1 hour so that if user adds
 	setTimeout( function( key ) { 
 		console.log("checking listing of " + key )
 		chrome.tabs.create( { active:false , url:key } , function( tab ) { tabIds.push( tab.id ); });
-		result[key].update = Date.now() + toTime( result.options.update );
-		setTimeout( doUpdates , toTime( result.options.updateMin ) );
+		result[key].update = Date.now() + result.options.update ;
+		setTimeout( doUpdates , result.options.updateMin );
 	} , next - Date.now() , key );
 }
 function connected( p ) {
@@ -73,7 +73,7 @@ function connected( p ) {
 
 function setDefaultOptions() {
 	if ( !result.options ) {
-		result.options = { "update":"7 days" , "updateMin":"5 seconds" , "sorting":"name" , "rules":[] }
+		result.options = { "update":"7 days" , "updateMin":"5 seconds" , "sorting":"name" , "rules":[] , "dark":false }
 	}
 }
 var portCP , portOptions , result , tabIds = [];
