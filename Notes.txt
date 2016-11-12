@@ -15,19 +15,19 @@ Change browser action to open page when clicked. (remove menu)
 
 			----- Required -----
 
-Work out why it doesn't close tabs sometimes.
-
-Double click remove tag/entry to remove. Don't want to accidently remove tags/entries.
+---- add wait to start to prevent it messing with things it shouldn't on startup.
 
 Don't update complete/oneshot manga. Maybe unstarted too.
 
-add wait to start to prevent it messing with things it shouldn't on startup.
+Double click remove tag/entry to remove. Don't want to accidently remove tags/entries.
+	Maybe draw a red cross after first click to indicate what's being removed.
+	Or, add a red border to what's being deleted, because it's super easy and probs looks nicer.
 
 if sort is a binary split, insert gap. And title of gap.
 
-			----- Extra features -----
+Work out why it doesn't close tabs sometimes.
 
-Make browser action not popup and just open content page.
+			----- Extra features -----
 
 Add image identifier. Does it make it too cluttered?
 	would need entries side by side.

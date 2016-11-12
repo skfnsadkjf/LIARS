@@ -1,19 +1,17 @@
 // Handles all changes to storage and messaging.
 //
 
-function doUpdates() { // add dummy entry that waits 1 hour so that if user adds new fast updated entry he doesn't have to restart.
-	var keys = Object.keys( result )
-	keys.splice( keys.indexOf( "options" ) , 1 );
-	var next = Math.min( ...keys.map( k => result[k].update) );
-	var key = keys.filter( k => next == result[k].update)[0];
-	console.log(next - Date.now() + " --- " + key)
-	setTimeout( function( key ) { 
-		console.log("checking listing of " + key )
-		chrome.tabs.create( { active:false , url:key } , function( tab ) { tabIds.push( tab.id ); });
-		result[key].update = Date.now() + result.options.update ;
-		setTimeout( doUpdates , result.options.updateMin );
-	} , next - Date.now() , key );
+function doUpdates() {
+	Object.keys( result ).forEach( function( key ) {
+		if ( key != "options" && result[key].update - Date.now() < 0 ) {
+			result[key].update = Date.now() + result.options.update;
+			chrome.tabs.create( { active:false , url:key } , function( tab ) { tabIds.push( tab.id ) } );
+			return;
+		}
+	});
 }
+
+
 function connected( p ) {
 	if ( p.name == "content_page" ) { portCP = p }
 	if ( p.name == "options" ) { portOptions = p }
@@ -45,6 +43,9 @@ function connected( p ) {
 			result[key].unread = message.updateUnread;
 			if ( portCP ) { portCP.postMessage( { [key] : result[key] } ) }
 		}
+		if ( tabIds.includes( p.sender.tab.id ) ) {
+			chrome.tabs.remove( p.sender.tab.id )
+		}
 
 		// from Options page.
 		if ( message.update ) {
@@ -62,9 +63,6 @@ function connected( p ) {
 			result.options.rules.splice( ...message.rule )
 		}
 		chrome.storage.local.set( { [key] : result[key] } );
-		if ( tabIds.includes( p.sender.tab.id ) ) {
-			chrome.tabs.remove( p.sender.tab.id )
-		}
 	});
 }
 
@@ -73,7 +71,7 @@ function connected( p ) {
 
 function setDefaultOptions() {
 	if ( !result.options ) {
-		result.options = { "update":"7 days" , "updateMin":"5 seconds" , "sorting":"name" , "rules":[] , "dark":false }
+		result.options = { "update":"604800000" , "updateMin":"60000" , "sorting":"name" , "rules":[] , "dark":false }
 	}
 }
 function browser_action() {
@@ -90,7 +88,7 @@ chrome.storage.local.get( null , function( r ) {
 	// result.options.rules[0].tags = ["manga" , "kissmanga"]
 	// chrome.storage.local.set( { "options" : result.options } );
 	// console.log(result)
-	doUpdates();
+	setInterval( doUpdates , result.options.updateMin );
 	chrome.runtime.onConnect.addListener( connected );
 	// chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" ) } );
 });

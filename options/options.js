@@ -21,7 +21,7 @@ function refreshFrequency( e ) {
 	}
 	else {
 		e.target.style.border = "";
-		port.postMessage( { "key" : "options" , [e.target.id] : time } ); // still sending in "x <time>" form.
+		port.postMessage( { "key" : "options" , [e.target.id] : time } );
 	}
 }
 function ruleSuccess( elem , rule ) {
