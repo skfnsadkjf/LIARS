@@ -1,33 +1,19 @@
 			-----------------
 			----- Plans -----
 
-When searching for tags when sorting split multiword tags.
-Allow searching of more than one tag at a time. I.E. searching for "cat girl" would give first "cat girl" then "cat"/"girl".
-
-sort by tag with named sections.
-
-Colour code entries based on tags/complete status.
-
-Change browser action to open page when clicked. (remove menu)
-
 			----- Current -----
-
 
 			----- Required -----
 
----- add wait to start to prevent it messing with things it shouldn't on startup.
+			----- Extra features -----
 
----- Don't update complete/oneshot manga. Maybe unstarted too.
+if sort is a binary split, insert gap. And title of gap.
 
 Double click remove tag/entry to remove. Don't want to accidently remove tags/entries.
 	Maybe draw a red cross after first click to indicate what's being removed.
 	Or, add a red border to what's being deleted, because it's super easy and probs looks nicer.
 
-if sort is a binary split, insert gap. And title of gap.
-
-Work out why it doesn't close tabs sometimes.
-
-			----- Extra features -----
+Colour code entries based on tags/complete status.
 
 Add image identifier. Does it make it too cluttered?
 	would need entries side by side.
@@ -35,8 +21,6 @@ Add image identifier. Does it make it too cluttered?
 		save images somewhere. Unsure how logistics would work.
 
 			----- Optional -----
-
-Import data from Feedreader and text file.
 
 			----- Relating to using not just kissmanga -----
 
@@ -55,14 +39,10 @@ May be helpful for things like blog updates where saving links wouldn't be meani
 			-----------------
 			----- Bugs -----
 
+Capitalisation differences in urls can bork everything.
+
 Error: "Attempt to postMessage on disconnected port"
 After checking manga listing. Tab doesn't get closed because of this.
-
-
-first sort in default reversed if sorting from first default.
-
-
-Either addon or firefox is borking my tabs sometimes. Hasn't happened it ages now
 
 			-----------------
 			----- Notes -----

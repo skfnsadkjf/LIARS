@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "grim",
-	"version": "1.1.3",
+	"version": "1.1.4",
 
 	"description": "Checks pages for updated content and records which content user has read",
 	"icons": {
@@ -27,7 +27,7 @@
 			// "exclude_matches": ["*://kissmanga.com/Manga/*/*"],
 			// "matches": ["*://kissmanga.com/Manga/*"],
 			"matches": ["*://*/*"],
-			"all_frames": true,
+			"all_frames": false,
 			"js": ["content_script/content_script.js"]
 		}
 	],
