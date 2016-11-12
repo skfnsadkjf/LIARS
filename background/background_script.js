@@ -76,7 +76,13 @@ function setDefaultOptions() {
 		result.options = { "update":"7 days" , "updateMin":"5 seconds" , "sorting":"name" , "rules":[] , "dark":false }
 	}
 }
+function browser_action() {
+	chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" ) } );
+}
+// // ADD THIS TO HOPEFULLY MAKE IT NOT BORKED WHEN STARTING UP.
+// chrome.runtime.onStartup.addListener()
 var portCP , portOptions , result , tabIds = [];
+browser.browserAction.onClicked.addListener( browser_action );
 chrome.storage.local.get( null , function( r ) {
 	result = r;
 	// result.options = false;
@@ -86,7 +92,7 @@ chrome.storage.local.get( null , function( r ) {
 	// console.log(result)
 	doUpdates();
 	chrome.runtime.onConnect.addListener( connected );
-	chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" ) } );
+	// chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" ) } );
 });
 
 

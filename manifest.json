@@ -17,9 +17,9 @@
 
 	"browser_action": {
 		"default_icon": "icons/beasts-32.png",
-		"default_title": "grim",
-		"browser_style": false,
-		"default_popup": "browser_action/popup.html"
+		"default_title": "grim"
+		// "browser_style": false,
+		// "default_popup": "browser_action/popup.html"
 	},
 
 	"content_scripts": [

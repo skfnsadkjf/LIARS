@@ -1,42 +1,47 @@
 			-----------------
 			----- Plans -----
 
+When searching for tags when sorting split multiword tags.
+Allow searching of more than one tag at a time. I.E. searching for "cat girl" would give first "cat girl" then "cat"/"girl".
+
+sort by tag with named sections.
+
+Colour code entries based on tags/complete status.
+
+Change browser action to open page when clicked. (remove menu)
+
 			----- Current -----
+
 
 			----- Required -----
 
+Work out why it doesn't close tabs sometimes.
+
+Double click remove tag/entry to remove. Don't want to accidently remove tags/entries.
+
+Don't update complete/oneshot manga. Maybe unstarted too.
+
+add wait to start to prevent it messing with things it shouldn't on startup.
+
+if sort is a binary split, insert gap. And title of gap.
+
 			----- Extra features -----
 
-DOM elelent selector.
-	browser action popup:
-		contain all options for making rule.
-		? icons with instructions
-
-	arrow keys traverse dom selector.
-
-rules:
-	merge option for multiple urls into one content page entry
-
-Options page.
-	update minimum
-	How often to check for update settings.
-		Change this to options/rules
-
-if sort is a binary split, insert gap.
-
-			----- Optional -----
-
-hotkeys for browser action things
+Make browser action not popup and just open content page.
 
 Add image identifier. Does it make it too cluttered?
 	would need entries side by side.
 	image source in rule.
 		save images somewhere. Unsure how logistics would work.
 
+			----- Optional -----
+
 Import data from Feedreader and text file.
 
 			----- Relating to using not just kissmanga -----
 
+rules:
+	merge option for multiple urls into one content page entry
 
 Do rss stuff in background
 Do I care about rss yet? No.
@@ -50,6 +55,10 @@ May be helpful for things like blog updates where saving links wouldn't be meani
 			-----------------
 			----- Bugs -----
 
+Error: "Attempt to postMessage on disconnected port"
+After checking manga listing. Tab doesn't get closed because of this.
+
+
 first sort in default reversed if sorting from first default.
 
 
@@ -62,3 +71,14 @@ Either addon or firefox is borking my tabs sometimes. Hasn't happened it ages no
 Can't GET a kissmanga page.
 Possible fix if I into headers.
 Can't into headers because ff forbids me from changing them. <--
+
+(つ(^w^)三つ)`Д^)∴
+
+
+
+
+
+
+
+
+

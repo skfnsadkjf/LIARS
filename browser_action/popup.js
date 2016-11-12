@@ -4,7 +4,7 @@ document.addEventListener("click", function(e) {
 			if ( tabs.length > 0 ) {
 				chrome.tabs.update( tabs[0].id , { active : true } );
 			} else {
-				chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" )} );
+				chrome.tabs.create( { url : chrome.runtime.getURL( "content_page/content_page.html" ) } );
 			}
 		});
 	}
