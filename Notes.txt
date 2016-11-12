@@ -17,7 +17,7 @@ Change browser action to open page when clicked. (remove menu)
 
 ---- add wait to start to prevent it messing with things it shouldn't on startup.
 
-Don't update complete/oneshot manga. Maybe unstarted too.
+---- Don't update complete/oneshot manga. Maybe unstarted too.
 
 Double click remove tag/entry to remove. Don't want to accidently remove tags/entries.
 	Maybe draw a red cross after first click to indicate what's being removed.

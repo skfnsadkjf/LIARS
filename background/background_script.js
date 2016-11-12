@@ -11,6 +11,13 @@ function doUpdates() {
 	});
 }
 
+function neverUpdateCheck( tag ) {
+	if ( tag == "complete" || tag == "oneshot" ) {
+		result[key].includes( "complete" ) || result[key].includes( "oneshot" )
+		? result[key].update = Infinity
+		: result[key].update = Date.now() + result.options.update;
+	}
+}
 
 function connected( p ) {
 	if ( p.name == "content_page" ) { portCP = p }
@@ -26,9 +33,11 @@ function connected( p ) {
 		}
 		if ( message.removeTag ) {
 			result[key].tags = result[key].tags.filter( v => v != message.removeTag );
+			neverUpdateCheck( key , message.removeTag );
 		}
 		if ( message.addTag ) {
 			result[key].tags.push( message.addTag );
+			neverUpdateCheck( key , message.addTag );
 		}
 		if ( message.dark != undefined ) {
 			result[key].dark = message.dark;
