@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>grim</title>
+	<link rel="stylesheet" href="content_page.css"/>
+	<script src="content_page.js"></script>
+	<template id="entry_template"><div><h2><a target="_blank"></a><span></span></h2></div></template>
+	<template id="popout_template"><div class="popout"><span class="remove_entry">Delete entry</span><div class="tags">Add tag:<input></input></div></div></template>
+</head>
+<body>
+	<div>
+		<div class="sort">
+			<div>Sort by:</div>
+				<button id="sortByDefault">Default</button>
+				<button id="sortByName">Name</button>
+				<button id="sortByUnread">Unread>0</button>
+				<button id="sortByStarted">Started</button>
+				<form id="sortByTag">Tag:<input></input></form>
+			</div>
+		</div>
+		<div id="entries"></div>
+	</div>
+</body>
+

@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "grim",
-	"version": "1.1.4",
+	"version": "1.2.2",
 
 	"description": "Checks pages for updated content and records which content user has read",
 	"icons": {
@@ -10,42 +10,38 @@
 
 	"permissions": [
 		"tabs",
-		"storage",
-		"webRequest",
-		"webRequestBlocking"
+		"storage"
+		// "webRequest",
+		// "webRequestBlocking"
 	],
 
 	"browser_action": {
 		"default_icon": "icons/beasts-32.png",
 		"default_title": "grim"
-		// "browser_style": false,
-		// "default_popup": "browser_action/popup.html"
 	},
 
 	"content_scripts": [
 		{
-			// "exclude_matches": ["*://kissmanga.com/Manga/*/*"],
-			// "matches": ["*://kissmanga.com/Manga/*"],
-			"matches": ["*://*/*"],
+			"matches": ["<all_urls>"],
 			"all_frames": false,
-			"js": ["content_script/content_script.js"]
+			"js": ["content_script.js"]
 		}
 	],
 
 	"background": {
 		"scripts": [
-			"background/background_script.js"
+			"background_script.js"
 		]
 	},
-	
-	// Only needed for a bug making me not able to set the options page without this.
+
+	// needed for making me not able to set the options page without it.
 	"applications": {
 		"gecko": {
 			"id": "{e0695a0a-6a63-4d90-a89d-2a9004f2cc4b}"
 		}
 	},
 	"options_ui": {
-		"page": "options/options.html"
+		"page": "options.html"
 	}
 
 }

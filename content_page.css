@@ -3,7 +3,7 @@
 	margin: 3px auto;
 	width: 1000px;
 }
-h2:hover { background-color: #CFF2F2; }
+h2:hover { background-color: #3f1212; }
 h2 {
 	padding-left: 10px;
 	margin: 0px 0px 0px 0px;
@@ -16,29 +16,29 @@ h2 span {
 	width: 50px;
 	float: right;
 }
+a { color: white; }
 .tags *{ display: inline; }
-.tags span:hover { background-color: #bbbbbb; }
+.tags span:hover { background-color: #444444; }
 .tags span {
 	margin-left: 10px;
 	cursor: pointer;
-	background-color: #dddddd;
+	background-color: #222222;
 	padding: 1px 4px 3px 4px;
 	border-radius: 3px;
 	vertical-align: bottom;
 }
 .popout a {	display: table; }
 .popout { padding: 0px 15px 20px 30px; }
-a { color: black; }
 form { display: inline; }
 form input { height: 12px; width: 60px; }
-.remove_entry:hover { background-color: #444444; }
+.remove_entry:hover { background-color: #bbbbbb; }
 .remove_entry {
 	cursor: pointer;
-	background-color: #dddddd;
+	background-color: #222222;
 	float: right;
 	padding: 1px 4px 3px 4px;
 	border-radius: 5px;
 }
-#dark {
-	float: right;
-}
+body { background-color: #444444; color: white; }
+input { filter: invert(100%); }
+button { filter: invert(100%); }

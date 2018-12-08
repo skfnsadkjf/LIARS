@@ -4,30 +4,28 @@
 	<title>grim</title>
 	<link rel="stylesheet" href="options.css"/>
 	<script src="options.js"></script>
-	<template id="form_template"><form><input></input></form></template>
 </head>
 <body>
 	<!-- <span>Rules do nothing at the moment.</span> -->
 	<h4>Default sorting:</h4>
-	<text>Allows: name, unread>0, started, (tag). Use ! for reverse order.</text>
-	<text>e.g. name fantasy !started</text>
-	<form><input id="sorting"></input></form>
+	<text>Allows: name, unread>0, started, (tag). Repeat to reverse.</text>
+	<text>e.g. name fantasy started started</text>
+	<input id="sorting"></input>
 	<h4>Update frequency:</h4>
 	<text>Form: "x &lt;time&gt;". time can be any of day(s), hour(s), minute(s), second(s).</text>
 	<text>e.g. 3 days</text>
-	<form><input id="update"></input></form>
+	<input id="update"></input>
 	<span>Update frequency global minimum:</span>
 	<text>Your browser and some websites may not like you sending a lot of requests at the same time. Form: same as above.</text>
-	<form><input id="updateMin"></input></form>
+	<input id="updateMin"></input>
 	<h4>Rules:</h4>
 	<!-- <span>DOM selector will automatically add a rule. Rule will not contain -ex, -tags or -rf.</span> -->
-	<text>Form: JSON string. { match:___ , matchExcludes:___ , selector:___ , tags:[___] } </text>
+	<text>Form: JSON string. {"match":___ ,"matchExcludes":___ ,"selector":___ ,"tags":[___]} </text>
 	<text>Match and selector required.</text>
-	<text>Match is a url that may contain * as a wildcard. e.g. *example.com*</text>
+	<text>Match is a regexp that shows which pages to save. e.g. "match":".+:\/\/example.com\/.+"</text>
 	<text>Selector is a css selector that finds the element containing the links you want.</text>
-	<text>e.g. { match:"*example.com*" , matchExcludes:"*example.com/frogs/*", selector:".listing" , tags:["example","not frogs"] }</text>
+	<text>e.g. {"match":".+:\/\/example.com\/.+","matchExcludes":".+:\/\/example.com\/.+\/frogs.+","selector":".listing","tags":["example","not frogs"]}</text>
 	<div id="rules">
 	</div>
 </body>
 
- 
