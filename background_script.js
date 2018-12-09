@@ -1,5 +1,5 @@
 // Handles all changes to storage and messaging.
-//
+
 function doUpdates() {
 	console.log("attempting updates")
 	for ( key in result.entries ) {

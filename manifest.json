@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "grim",
-	"version": "1.2.2",
+	"version": "1.2.4",
 
 	"description": "Checks pages for updated content and records which content user has read",
 	"icons": {
@@ -11,8 +11,6 @@
 	"permissions": [
 		"tabs",
 		"storage"
-		// "webRequest",
-		// "webRequestBlocking"
 	],
 
 	"browser_action": {
@@ -34,7 +32,6 @@
 		]
 	},
 
-	// needed for making me not able to set the options page without it.
 	"applications": {
 		"gecko": {
 			"id": "{e0695a0a-6a63-4d90-a89d-2a9004f2cc4b}"
