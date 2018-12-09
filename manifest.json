@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "grim",
-	"version": "1.2.4",
+	"version": "1.2.5",
 
 	"description": "Checks pages for updated content and records which content user has read",
 	"icons": {
